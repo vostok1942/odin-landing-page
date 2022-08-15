@@ -1,0 +1,70 @@
+* {
+    outline: 1px solid red;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: red;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    max-width: 100px;
+    padding: 8px;
+}
+
+.hero-image {
+    max-width: 400px;
+    height: auto;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero {
+    display: flex;
+}
+
+.random-info {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+}
+
+.images-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Aligns 'Some random information' h2*/
+.random-info .section-title { 
+    text-align: center;
+}
+
+/* Crops images in the random information section */
+.images-container img {
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+    border: 5px solid aqua;
+    border-radius: 10px;
+}
