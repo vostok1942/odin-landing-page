@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 * {
     outline: 1px solid red;
 }
@@ -5,13 +7,15 @@
 body {
     padding: 0;
     margin: 0;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: red;
+    background-color: #1F2937;
+    padding: 0 12px;
 }
 
 ul {
@@ -23,14 +27,33 @@ ul {
 
 a {
     text-decoration: none;
+    font-size: 18px;
+    color: #E5E7EB;
+    margin: 0 8px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #F9FAF8;
+    margin-left: 8px;
 }
 
 button {
-    max-width: 100px;
+    width: 120px;
     padding: 8px;
+    height: 40px;
+    background-color: #3882F6;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
 }
 
-.hero-image {
+.hero {
+    display: flex;
+    background-color: #1F2937;
+}
+
+.hero img {
     max-width: 400px;
     height: auto;
 }
@@ -40,8 +63,15 @@ button {
     flex-direction: column;
 }
 
-.hero {
-    display: flex;
+.hero-text h2 {
+    font-size: 48px;
+    font-weight: 900;
+    color: #F9FAF8;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: #E5E7EB;
 }
 
 .random-info {
@@ -50,14 +80,18 @@ button {
     padding: 12px;
 }
 
-.images-container {
-    display: flex;
-    justify-content: space-between;
+.random-info h2 { 
+    text-align: center;
+    font-size: 36px;
+    font-weight: 900;
+    color: #1F2937;
 }
 
-/*Aligns 'Some random information' h2*/
-.random-info .section-title { 
-    text-align: center;
+.images-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
 }
 
 /* Crops images in the random information section */
@@ -65,6 +99,40 @@ button {
     object-fit: cover;
     width: 150px;
     height: 150px;
-    border: 5px solid aqua;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
+}
+
+.quote-section {
+    display: flex;
+    flex-direction: column;
+    background-color: #E5E7EB;
+    font-size: 36px;
+    font-style: italic;
+    color: #1F2937;
+
+}
+
+.action-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
+
+.action-section-content {
+    background-color: gold;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 15px 80px;
+    gap: 100px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1F2937;
+    color: #F9FAF8;
 }
