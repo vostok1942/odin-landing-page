@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-* {
-    outline: 1px solid red;
-}
-
 body {
     padding: 0;
     margin: 0;
@@ -29,7 +25,8 @@ a {
     text-decoration: none;
     font-size: 18px;
     color: #E5E7EB;
-    margin: 0 8px;
+    margin: 0 12px;
+    flex-shrink: 0;
 }
 
 h1 {
@@ -46,38 +43,57 @@ button {
     border-radius: 6px;
     color: white;
     font-size: 16px;
+    font-weight: bold;
 }
 
 .hero {
     display: flex;
     background-color: #1F2937;
+    align-items: center;
+    padding: 25px 100px;
+    justify-content: center;
+    height: 300px;
 }
 
 .hero img {
-    max-width: 400px;
+    max-width: 350px;
     height: auto;
 }
 
-.hero-text {
+.hero div {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    margin-right: 70px;
 }
 
-.hero-text h2 {
+.hero div button {
+    border: 0;
+}
+
+.hero div button:hover {
+    transform: scale(1.05);
+    transition-duration: 0.4s;
+}
+
+.hero div h2 {
     font-size: 48px;
     font-weight: 900;
     color: #F9FAF8;
+    margin: 0;
 }
 
-.hero-text p {
+.hero div p {
     font-size: 18px;
     color: #E5E7EB;
 }
 
+/* make divs expand when hover */
+
 .random-info {
     display: flex;
     flex-direction: column;
-    padding: 12px;
+    padding: 20px;
 }
 
 .random-info h2 { 
@@ -89,28 +105,60 @@ button {
 
 .images-container {
     display: flex;
+    align-items: flex-start;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 40px;
+    flex-wrap: wrap;
 }
 
-/* Crops images in the random information section */
+.images-container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+}
+
 .images-container img {
     object-fit: cover;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
 }
+
+#green:hover, #cut:hover, #jar:hover, #water:hover {
+    /* animation-name: zoom;
+    animation-duration: 0.8s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards; */
+    transform: scale(1.15);
+    transition-duration: 0.5s;
+}
+
 
 .quote-section {
     display: flex;
     flex-direction: column;
     background-color: #E5E7EB;
+    color: #1F2937;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.quote-section p {
+    display: flex;
+    flex-direction: column;
     font-size: 36px;
     font-style: italic;
-    color: #1F2937;
+}
 
+.quote-section p span {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: bold;
 }
 
 .action-section {
@@ -121,12 +169,22 @@ button {
 }
 
 .action-section-content {
-    background-color: gold;
+    background-color: #3882F6;
     border-radius: 10px;
     display: flex;
     align-items: center;
     padding: 15px 80px;
     gap: 100px;
+    color: white;
+}
+
+.action-section-content button {
+    border: 3px solid white;
+}
+
+.action-section-content button:hover {
+    transform: scale(1.05);
+    transition-duration: 0.4s;
 }
 
 footer {
@@ -135,4 +193,5 @@ footer {
     align-items: center;
     background-color: #1F2937;
     color: #F9FAF8;
+    
 }
